@@ -1,3 +1,5 @@
+(work in progress)
+
 # mancala-swift
 
 This is an implementation of Mancala game in Swift for Mobile Development course.
