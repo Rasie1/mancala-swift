@@ -1,7 +1,5 @@
 import Foundation
 import Glibc
- 
-
 import CommandLineKit
 
 let cli = CommandLineKit.CommandLine()
@@ -21,6 +19,7 @@ do {
   try cli.parse()
 } catch {
   cli.printUsage(error)
+  exit(0)
 }
 
 var players: Int = 2 

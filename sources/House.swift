@@ -1,3 +1,1 @@
-class House {
-    
-}
+typealias House = Int

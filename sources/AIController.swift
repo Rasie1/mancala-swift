@@ -1,5 +1,10 @@
+import Glibc
+
 class AIController: Controller {
     func makeMove(state: GameState) -> PlayerMove {
-        return 0
+        let border = state.players[0].houses.count
+        let move = random() % border
+
+        return move
     }
 }
