@@ -10,10 +10,23 @@ func rules() {
     print("When one player no longer has any seeds in any of their houses, the game ends. The other player moves all remaining seeds to their store, and the player with the most seeds in their store wins.")
 }
 
-func kalah(houses: Int, seeds: Int, players: Int) {
+func runGame(houses: Int, seeds: Int, players: Int) {
+    var gameShouldContinue = true
 
+
+    let controllers = (0...(players - 1)).map({i in PlayerController(playerIndex: i)})
+    let state = GameState(houses: houses, seeds: seeds, players: players)
+    let game = MancalaGameMode(state: state, players: controllers)
+
+    while gameShouldContinue {
+        game.step()
+
+        if let won = game.won() {
+            gameShouldContinue = false
+        }
+    }
 }
 
 
-kalah(houses: 6, seeds: 4, players: 2)
+runGame(houses: 6, seeds: 4, players: 2)
  

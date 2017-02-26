@@ -1,3 +1,1 @@
-class PlayerMove {
-
-}
+typealias PlayerMove = Int
