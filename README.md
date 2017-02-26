@@ -13,3 +13,11 @@ Everything is explained in this [article](https://www.twilio.com/blog/2015/12/ge
 To build, all you have to do is `swift build` from project's directory.
 
 To run, you just `.build/debug/Mancala`
+
+# How to play
+
+At each turn, you just have to type in number of house you want to empty.
+
+You can set any number of houses and initial seeds number for the game. Also, this game is multiplayer: by default, Mancala-Kalah is a 2-player game, but you can turn it into a merciless bloodbath by setting players to 132
+
+You can replace current player with AI by typing "ai".
